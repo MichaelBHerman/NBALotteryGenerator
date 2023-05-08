@@ -2,7 +2,10 @@ import java.util.*;
 
 public class LotteryPicker {
 
-    //TODO: Declare the fields in a universal scope.
+    public static final String ANSI_RESET = "\u001B[0m";
+    public static final String ANSI_GREEN = "\u001B[32m";
+    public static final String ANSI_BLUE = "\u001B[34m";
+
 
     /**
      * Takes the input of lottery teams and their respective odds and populates a hashmap.
@@ -89,6 +92,7 @@ public class LotteryPicker {
      */
 
     public static void displayDraftOrder(String[] draftOrder) {
+        System.out.println("2023 NBA Draft Lottery Results: \n");
         for (int i = 0; i < draftOrder.length; i++) {
             int pick = i + 1;
             System.out.println("Pick " + pick + ": " + draftOrder[i]);
@@ -116,7 +120,7 @@ public class LotteryPicker {
             }
             return countFirstPicks(simulations, initialSimulations, totalFirstPicks, team);
         }
-        System.out.println(team + " won the first pick " + totalFirstPicks + " times out of " + initialSimulations + " simulations.");
+        System.out.println("\n" + ANSI_BLUE + team + ANSI_RESET +" won the first pick " + ANSI_GREEN + totalFirstPicks + ANSI_RESET +" times out of " + ANSI_GREEN  +initialSimulations + ANSI_RESET + " simulations.");
         return totalFirstPicks;
     }
 
