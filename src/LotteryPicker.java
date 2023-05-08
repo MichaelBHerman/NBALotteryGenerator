@@ -128,6 +128,6 @@ public class LotteryPicker {
         Double[] teamProbabilities = {14.0, 14.0, 14.0, 12.5, 10.5, 9.0, 6.8, 6.7, 4.5, 3.0, 1.8, 1.7, 1.0, 0.5};
         populateMap(lotteryTeams, teamProbabilities);
         displayDraftOrder(generateDraftOrder(populateLotteryBalls(lotteryTeams, populateMap(lotteryTeams, teamProbabilities)), lotteryTeams));
-//        countFirstPicks(1000, 1000, 0,  "TORONTO");
+        countFirstPicks(1000, 1000, 0,  "UTAH");
     }
 }
